@@ -1,0 +1,33 @@
+/* CSS Personalizzato aggiuntivo a Tailwind */
+body {
+    scroll-behavior: smooth;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Scroll margin per evitare che l'header fisso copra l'inizio delle sezioni */
+section, main {
+    scroll-margin-top: 100px;
+}
+
+/* Animazione custom per lo scroll */
+@keyframes bounce-custom {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-15px); }
+    60% { transform: translateY(-7px); }
+}
+.animate-bounce-custom {
+    animation: bounce-custom 2s infinite;
+}
+
+/* Accessibilità: Rimuovi animazioni e scroll fluido se l'utente ha impostato il movimento ridotto */
+@media (prefers-reduced-motion: reduce) {
+    .animate-bounce-custom {
+        animation: none !important;
+    }
+    html, body {
+        scroll-behavior: auto !important;
+    }
+    * {
+        transition-duration: 0.01ms !important;
+    }
+}

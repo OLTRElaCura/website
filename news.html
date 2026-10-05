@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLTRE la cura - Oncology & Research</title>
+    <!-- Tailwind CSS (CDN per GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#114266',
+                        secondary: '#519882',
+                        bglight: '#f4f7f6',
+                        bgdark: '#e0ebeb'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-bgdark to-bglight text-gray-800 flex flex-col min-h-screen">
+    
+    <!-- Link per lo skip accessibile -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 z-[999] rounded">Salta al contenuto principale</a>
+
+    <!-- Intestazione -->
+    <header class="fixed w-full top-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-bold text-3xl text-primary tracking-tight" aria-label="Home OLTRE la cura">OLTRE</a>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-6 items-center" aria-label="Menu Principale Desktop">
+                    <a href="index.html#statuto" class="text-gray-700 hover:text-secondary font-medium transition-colors">Statuto</a>
+                    <a href="index.html#chi-siamo" class="text-gray-700 hover:text-secondary font-medium transition-colors">Chi siamo</a>
+                    <a href="research.html" class="text-gray-700 hover:text-secondary font-medium transition-colors">Research</a>
+                    <a href="news.html" class="text-gray-700 hover:text-secondary font-medium transition-colors">News</a>
+                    <a href="index.html#sostienici" class="bg-primary hover:bg-secondary text-white px-5 py-2 rounded-full font-bold transition-transform hover:-translate-y-0.5 shadow-md">Sostienici</a>
+                </nav>
+                
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" type="button" class="text-primary hover:text-secondary focus:outline-none focus:ring-2 focus:ring-secondary p-2 rounded-md" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="sr-only">Apri menu principale</span>
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full" id="mobile-menu">
+            <nav class="px-4 pt-2 pb-4 space-y-2" aria-label="Menu Mobile">
+                <a href="index.html#statuto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Statuto</a>
+                <a href="index.html#chi-siamo" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Chi siamo</a>
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Research</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">News</a>
+                <a href="index.html#sostienici" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:text-secondary hover:bg-gray-50">Sostienici</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow pt-32 px-4 pb-20">
+        <div class="max-w-7xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold text-primary mb-6">News & Eventi</h1>
+            <p class="text-xl text-gray-600 max-w-2xl mx-auto mb-12">Rimani aggiornato sulle nostre campagne di sensibilizzazione e sulle novità dal mondo della ricerca oncologica.</p>
+            
+            <div class="bg-white p-12 rounded-2xl shadow-sm border border-gray-100">
+                <i class="fa-regular fa-newspaper text-6xl text-secondary mb-6" aria-hidden="true"></i>
+                <h2 class="text-2xl font-bold text-gray-800 mb-4">Nessun articolo al momento</h2>
+                <p class="text-gray-600">Torna a trovarci presto per le ultime novità e iniziative dell'associazione.</p>
+                <a href="index.html" class="inline-block mt-8 bg-primary hover:bg-secondary text-white px-6 py-3 rounded-full font-bold transition-colors">Torna alla Home</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer semplice -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 OLTRE la cura ETS. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLTRE la cura - Oncology & Research</title>
+    <!-- Tailwind CSS (CDN per GitHub Pages) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#114266',
+                        secondary: '#519882',
+                        bglight: '#f4f7f6',
+                        bgdark: '#e0ebeb'
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- FontAwesome per le icone -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS Personalizzato -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="bg-gradient-to-br from-bgdark to-bglight text-gray-800 flex flex-col min-h-screen">
+    
+    <!-- Link per lo skip accessibile -->
+    <a href="#main-content" class="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 bg-primary text-white p-2 z-[999] rounded">Salta al contenuto principale</a>
+
+    <!-- Intestazione -->
+    <header class="fixed w-full top-0 bg-white/90 backdrop-blur-md shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand -->
+                <div class="flex-shrink-0">
+                    <a href="index.html" class="font-bold text-3xl text-primary tracking-tight" aria-label="Home OLTRE la cura">OLTRE</a>
+                </div>
+                
+                <!-- Desktop Nav -->
+                <nav class="hidden md:flex space-x-6 items-center" aria-label="Menu Principale Desktop">
+                    <a href="index.html#statuto" class="text-gray-700 hover:text-secondary font-medium transition-colors">Statuto</a>
+                    <a href="index.html#chi-siamo" class="text-gray-700 hover:text-secondary font-medium transition-colors">Chi siamo</a>
+                    <a href="research.html" class="text-gray-700 hover:text-secondary font-medium transition-colors">Research</a>
+                    <a href="news.html" class="text-gray-700 hover:text-secondary font-medium transition-colors">News</a>
+                    <a href="index.html#sostienici" class="bg-primary hover:bg-secondary text-white px-5 py-2 rounded-full font-bold transition-transform hover:-translate-y-0.5 shadow-md">Sostienici</a>
+                </nav>
+                
+                <!-- Mobile Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="menu-btn" type="button" class="text-primary hover:text-secondary focus:outline-none focus:ring-2 focus:ring-secondary p-2 rounded-md" aria-expanded="false" aria-controls="mobile-menu">
+                        <span class="sr-only">Apri menu principale</span>
+                        <i class="fa-solid fa-bars text-2xl" aria-hidden="true"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div class="hidden md:hidden bg-white border-t border-gray-100 shadow-lg absolute w-full" id="mobile-menu">
+            <nav class="px-4 pt-2 pb-4 space-y-2" aria-label="Menu Mobile">
+                <a href="index.html#statuto" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Statuto</a>
+                <a href="index.html#chi-siamo" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Chi siamo</a>
+                <a href="research.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">Research</a>
+                <a href="news.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-secondary hover:bg-gray-50">News</a>
+                <a href="index.html#sostienici" class="block px-3 py-2 rounded-md text-base font-bold text-primary hover:text-secondary hover:bg-gray-50">Sostienici</a>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="flex-grow pt-20">
+        
+        <!-- Hero Section -->
+        <section id="home" class="min-h-[90vh] flex flex-col justify-center items-center text-center px-4 relative">
+            
+            <svg class="w-full max-w-4xl mb-8 hero-logo-svg" viewBox="0 0 650 280" role="img" aria-labelledby="logo-title" xmlns="http://www.w3.org/2000/svg">
+                <title id="logo-title">Logo OLTRE la cura</title>
+                <defs>
+                    <linearGradient id="arcGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" stop-color="#114266"/>
+                        <stop offset="100%" stop-color="#519882"/>
+                    </linearGradient>
+                </defs>
+                <path d="M 170 50 C 310 -20, 520 -10, 640 80 C 510 30, 330 35, 190 75 Z" fill="url(#arcGrad)"/>
+                <circle cx="130" cy="100" r="42" fill="none" stroke="#114266" stroke-width="26" />
+                <path d="M 100 132 Q 70 200, 45 250 L 85 250 Q 115 190, 133 135 Z" fill="#114266"/>
+                <text x="195" y="145" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-weight="900" font-size="145" fill="#114266" letter-spacing="-3">LTRE</text>
+                <text x="590" y="215" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-weight="700" font-size="70" fill="#114266" text-anchor="end">la cura <tspan font-size="30" font-weight="500">ETS</tspan></text>
+                <text x="590" y="250" font-family="'Segoe UI', Tahoma, Arial, sans-serif" font-weight="500" font-size="22" fill="#114266" text-anchor="end">OncoLogy &amp; REsearch</text>
+            </svg>
+
+            <h1 class="text-3xl md:text-4xl text-primary font-semibold max-w-3xl mb-10">Andiamo OLTRE i limiti della ricerca</h1>
+            
+            <a href="#mission" class="bg-gradient-to-r from-primary to-[#2a6f9e] hover:from-secondary hover:to-[#3e7a68] text-white px-8 py-4 rounded-full text-lg font-bold shadow-lg transition-transform transform hover:-translate-y-1">Scopri la nostra mission</a>
+            
+            <div class="absolute bottom-10 animate-bounce-custom text-primary text-3xl">
+                <a href="#mission" aria-label="Scorri giù verso la mission">
+                    <i class="fa-solid fa-chevron-down" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Mission -->
+        <section id="mission" class="py-20 px-4 max-w-7xl mx-auto text-center">
+            <h2 class="text-3xl font-bold text-primary mb-12 uppercase tracking-widest">La nostra mission</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-white/60 p-8 rounded-2xl shadow-sm border-t-4 border-secondary flex flex-col justify-between items-center transition-transform hover:-translate-y-1">
+                    <p class="text-lg text-gray-700 font-medium mb-8 leading-relaxed">Spingiamo la ricerca oncologica OLTRE i limiti attuali, per trasformare la speranza in cure concrete contro i tumori più aggressivi.</p>
+                    <i class="fa-solid fa-microscope text-5xl text-primary drop-shadow-md" aria-hidden="true"></i>
+                </div>
+                <div class="bg-white/60 p-8 rounded-2xl shadow-sm border-t-4 border-secondary flex flex-col justify-between items-center transition-transform hover:-translate-y-1">
+                    <p class="text-lg text-gray-700 font-medium mb-8 leading-relaxed">Sosteniamo le menti brillanti della ricerca per creare nuove prospettive di cura. Perché il futuro della medicina passa attraverso le persone.</p>
+                    <i class="fa-solid fa-lightbulb text-5xl text-primary drop-shadow-md" aria-hidden="true"></i>
+                </div>
+                <div class="bg-white/60 p-8 rounded-2xl shadow-sm border-t-4 border-secondary flex flex-col justify-between items-center transition-transform hover:-translate-y-1">
+                    <p class="text-lg text-gray-700 font-medium mb-8 leading-relaxed">Finanziamo l'innovazione in oncologia per andare OLTRE la malattia e restituire il futuro ai pazienti.</p>
+                    <i class="fa-solid fa-user-group text-5xl text-primary drop-shadow-md" aria-hidden="true"></i>
+                </div>
+            </div>
+        </section>
+
+        <!-- Statuto -->
+        <section id="statuto" class="py-20 px-4 bg-[#f9fbfb] text-center">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-6 uppercase tracking-widest">Il nostro statuto e le finalità</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16 leading-relaxed">OLTRE la Cura è un Ente del Terzo Settore. Perseguiamo finalità civiche, solidaristiche e di utilità sociale ponendo la ricerca e l'innovazione scientifica al centro delle nostre attività, nel rispetto dei principi di trasparenza e open science.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-left">
+                    <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-secondary transition-transform hover:-translate-y-1">
+                        <i class="fa-solid fa-microscope text-4xl text-primary mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Ricerca sui Tumori Aggressivi</h3>
+                        <p class="text-gray-600">Promuoviamo e finanziamo la ricerca scientifica sui tumori solidi aggressivi e rari, affrontando le patologie con limitate opzioni terapeutiche ed elevato impatto sociale.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-secondary transition-transform hover:-translate-y-1">
+                        <i class="fa-solid fa-dna text-4xl text-primary mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Medicina di Precisione</h3>
+                        <p class="text-gray-600">Sviluppiamo approcci teranostici che integrano diagnostica e terapia, promuovendo nuove tecnologie biomediche e molecole farmacologiche innovative per trattamenti mirati.</p>
+                    </div>
+                    <div class="bg-white p-8 rounded-xl shadow-sm border-l-4 border-secondary transition-transform hover:-translate-y-1">
+                        <i class="fa-solid fa-user-graduate text-4xl text-primary mb-4" aria-hidden="true"></i>
+                        <h3 class="text-xl font-bold text-gray-800 mb-3">Sostegno ai Giovani</h3>
+                        <p class="text-gray-600">Sosteniamo la formazione e la carriera dei giovani talenti dell'oncologia attraverso borse di studio, premi di ricerca e programmi di mobilità nazionale e internazionale.</p>
+                    </div>
+                </div>
+
+                <a href="#" class="inline-block mt-12 bg-gradient-to-r from-primary to-[#2a6f9e] hover:from-secondary hover:to-[#3e7a68] text-white px-8 py-4 rounded-full font-bold shadow-md transition-transform hover:-translate-y-1">
+                    <i class="fa-solid fa-file-pdf mr-2" aria-hidden="true"></i> Scarica lo Statuto Completo
+                </a>
+            </div>
+        </section>
+
+        <!-- Chi Siamo & Modulo Contatti -->
+        <section id="chi-siamo" class="py-20 px-4 bg-white text-center">
+            <div class="max-w-7xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-6 uppercase tracking-widest">Il nostro Team</h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-16">Dietro "OLTRE la cura" ci sono professionisti, ricercatori e persone unite da un unico obiettivo: trovare risposte concrete ai tumori più aggressivi.</p>
+                
+                <h3 class="text-2xl text-secondary font-bold mb-10">Soci Fondatori</h3>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto text-left mb-16">
+                    <!-- Placeholder Fondatore (Ripetibile) -->
+                    <div class="bg-bglight p-6 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-6 border-l-4 border-primary shadow-sm hover:-translate-y-1 transition-transform">
+                        <img src="https://placehold.co/150x150/e0ebeb/114266?text=Foto" alt="Foto Profilo Socio Fondatore" class="w-32 h-32 rounded-full border-4 border-white shadow-md object-cover flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary mb-1">Nome Cognome</h4>
+                            <span class="block text-sm font-bold text-secondary uppercase tracking-wide mb-3">Socio Fondatore</span>
+                            <p class="text-gray-700 text-sm leading-relaxed">Breve biosketch descrittivo delle competenze mediche e del background scientifico.</p>
+                        </div>
+                    </div>
+                    <!-- Placeholder Fondatore (Ripetibile) -->
+                    <div class="bg-bglight p-6 rounded-xl flex flex-col sm:flex-row items-center sm:items-start gap-6 border-l-4 border-primary shadow-sm hover:-translate-y-1 transition-transform">
+                        <img src="https://placehold.co/150x150/e0ebeb/114266?text=Foto" alt="Foto Profilo Socio Fondatore" class="w-32 h-32 rounded-full border-4 border-white shadow-md object-cover flex-shrink-0">
+                        <div>
+                            <h4 class="text-xl font-bold text-primary mb-1">Nome Cognome</h4>
+                            <span class="block text-sm font-bold text-secondary uppercase tracking-wide mb-3">Socio Fondatore</span>
+                            <p class="text-gray-700 text-sm leading-relaxed">Breve biosketch descrittivo delle competenze mediche e del background scientifico.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modulo Unisciti -->
+                <div class="bg-gradient-to-br from-primary to-[#2a6f9e] rounded-2xl p-10 max-w-3xl mx-auto shadow-xl text-left text-white mt-20">
+                    <h3 class="text-2xl font-bold mb-4">Unisciti a noi!</h3>
+                    <p class="mb-8 text-gray-200">Se condividi i nostri valori e operi nel campo della ricerca, della medicina o vuoi supportare il nostro ente, inviaci la tua richiesta.</p>
+                    
+                    <form id="join-form" class="space-y-4">
+                        <div>
+                            <label for="j-name" class="sr-only">Il tuo Nome e Cognome</label>
+                            <input type="text" id="j-name" required placeholder="Il tuo Nome e Cognome" class="w-full p-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <label for="j-email" class="sr-only">La tua Email</label>
+                            <input type="email" id="j-email" required placeholder="La tua Email" class="w-full p-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <label for="j-role" class="sr-only">Professione o Qualifica</label>
+                            <input type="text" id="j-role" required placeholder="Professione (Es: Ricercatore, Medico...)" class="w-full p-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary">
+                        </div>
+                        <div>
+                            <label for="j-msg" class="sr-only">Parlaci di te</label>
+                            <textarea id="j-msg" rows="4" required placeholder="Parlaci di te e perché vorresti unirti..." class="w-full p-4 rounded-lg text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-secondary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary hover:bg-[#3e7a68] text-white font-bold py-4 rounded-full transition-colors shadow-md mt-2">Invia Richiesta</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- AI Assistant -->
+        <section id="chiedi-ad-oltre" class="py-20 px-4 bg-bglight text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl font-bold text-primary mb-4">Chiedi ad OLTRE</h2>
+                <p class="text-lg text-gray-600 mb-10">Hai dubbi sui tumori aggressivi o sulla nostra missione? Chiedi al nostro assistente virtuale.</p>
+                
+                <div class="bg-white rounded-2xl shadow-lg p-6 border-2 border-gray-100 flex flex-col h-[500px]">
+                    <!-- Chat Box -->
+                    <div id="ai-chat-output" class="flex-grow overflow-y-auto bg-gray-50 rounded-xl p-4 flex flex-col gap-2 mb-4 border border-gray-100 text-left">
+                        <div class="bg-bgdark text-gray-800 p-3 rounded-xl self-start max-w-[85%] shadow-sm rounded-bl-sm">
+                            <strong>OLTRE:</strong> Ciao! Sono l'assistente virtuale dell'associazione. Come posso aiutarti oggi?
+                        </div>
+                    </div>
+                    <!-- Input Area -->
+                    <div class="flex gap-2">
+                        <label for="ai-chat-input" class="sr-only">Scrivi la tua domanda all'intelligenza artificiale</label>
+                        <input type="text" id="ai-chat-input" placeholder="Scrivi la tua domanda qui..." class="flex-grow p-3 rounded-full border border-gray-300 focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary">
+                        <button onclick="sendMessage()" aria-label="Invia messaggio" class="bg-secondary hover:bg-[#3e7a68] text-white px-6 rounded-full font-bold transition-colors shadow-sm">
+                            <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sostienici -->
+        <section id="sostienici" class="py-24 px-4 bg-primary text-center text-white">
+            <div class="max-w-4xl mx-auto flex flex-col items-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-secondary mb-6 leading-tight">Vuoi fare la differenza?<br>Guarda anche tu OLTRE</h2>
+                <p class="text-xl text-gray-200 mb-12 max-w-2xl">Il tuo contributo ci permette di finanziare la ricerca e dare una prospettiva reale a chi combatte.</p>
+                
+                <div class="bg-white text-gray-900 rounded-2xl p-10 w-full max-w-2xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-primary mb-4">Fai una donazione</h3>
+                    <p class="text-gray-500 italic">[Qui andrà inserito il widget per le donazioni, es. Stripe, PayPal, IBAN]</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer semplice -->
+    <footer class="bg-gray-900 text-gray-300 py-8 text-center mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>&copy; 2026 OLTRE la cura ETS. Tutti i diritti riservati.</p>
+        </div>
+    </footer>
+
+    <!-- Script -->
+    <script src="js/main.js"></script>
+    <script src="js/ai-chat.js"></script>
+</body>
+</html>
