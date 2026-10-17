@@ -31,3 +31,7 @@ section, main {
         transition-duration: 0.01ms !important;
     }
 }
+
+hero-logo-svg{
+    translate: -200px;
+}
